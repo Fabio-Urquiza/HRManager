@@ -1,0 +1,26 @@
+/* AUTOMATICALLY GENERATED ON Sun May 05 22:13:31 COT 2024*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "DepartamentosFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DepartamentosFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DepartamentosFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DepartamentosFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "DepartamentosFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DepartamentosFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "DepartamentosFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "EmpleadosFacade", "existeEmpleadoConDocumento,Local,java.lang.String";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "DepartamentosFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "EmpleadosFacade", "**";
+};
+

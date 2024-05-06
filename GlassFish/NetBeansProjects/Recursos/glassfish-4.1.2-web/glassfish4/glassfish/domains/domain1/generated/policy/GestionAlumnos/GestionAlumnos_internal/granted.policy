@@ -1,0 +1,17 @@
+/* AUTOMATICALLY GENERATED ON Wed Dec 13 17:24:13 COT 2023*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "AlumnoFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "AlumnoFacade", "create,Local,com.gestionalumnos.entities.Alumno";
+  permission javax.security.jacc.EJBMethodPermission "AlumnoFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AlumnoFacade", "edit,Local,com.gestionalumnos.entities.Alumno";
+  permission javax.security.jacc.EJBMethodPermission "AlumnoFacade", "remove,Local,com.gestionalumnos.entities.Alumno";
+  permission javax.security.jacc.EJBMethodPermission "AlumnoFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "AlumnoFacade", "findRange,Local,int[]";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "AlumnoFacade", "**";
+};
+

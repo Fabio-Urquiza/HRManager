@@ -1,0 +1,33 @@
+/* AUTOMATICALLY GENERATED ON Sun Oct 22 06:55:40 COT 2023*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "MateriaFacade", "create,Local,Entity.Materia";
+  permission javax.security.jacc.EJBMethodPermission "MaestroFacade", "edit,Local,Entity.Maestro";
+  permission javax.security.jacc.EJBMethodPermission "MateriaFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "RegistroFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "MateriaFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "MaestroFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "MaestroFacade", "create,Local,Entity.Maestro";
+  permission javax.security.jacc.EJBMethodPermission "RegistroFacade", "create,Local,Entity.Registro";
+  permission javax.security.jacc.EJBMethodPermission "MateriaFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "MaestroFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "RegistroFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "RegistroFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "MaestroFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "RegistroFacade", "remove,Local,Entity.Registro";
+  permission javax.security.jacc.EJBMethodPermission "MateriaFacade", "edit,Local,Entity.Materia";
+  permission javax.security.jacc.EJBMethodPermission "MateriaFacade", "remove,Local,Entity.Materia";
+  permission javax.security.jacc.EJBMethodPermission "RegistroFacade", "edit,Local,Entity.Registro";
+  permission javax.security.jacc.EJBMethodPermission "MaestroFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "RegistroFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "MateriaFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "MaestroFacade", "remove,Local,Entity.Maestro";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "MaestroFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "RegistroFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "MateriaFacade", "**";
+};
+

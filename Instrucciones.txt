@@ -1,0 +1,6 @@
+Instrucciones 
+1. El proyecto debe de quedar ubicado en la carpeta documentos (C:\Users\Usuario\Documents\GitHub\Fábrica Software\NetBeans\HRManager)
+2. Los recursos deben de queda en la siguiente ubicación (C:\Users\Usuario\Documents\NetBeansProjects\Recursos\glassfish-4.1.2-web)
+3. Tener instalado XAMPP
+4. Gestos de la Base de Datos (http://localhost/phpmyadmin/index.php?route=/database/export&db=hrmanager)
+5. El script de la BD lo puede ubicar en la carpeta SQL del proyecto (C:\Users\Usuario\Documents\GitHub\Fábrica Software\NetBeans\HRManager\SQL)

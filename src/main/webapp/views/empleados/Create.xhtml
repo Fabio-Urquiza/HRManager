@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="EmpleadosCreateDlg" 
+                  widgetVar="EmpleadosCreateDialog" 
+                  modal="true" 
+                  resizable="false" 
+                  appendTo="@(body)" 
+                  header="#{bundle.CreateEmpleadosTitle}">
+            <h:form id="EmpleadosCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" 
+                                 rendered="#{empleadosController.selected != null}"> 
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_documentoTipo}" 
+                                       for="documentoTipo" />
+                        <p:selectOneMenu id="documentoTipo" 
+                                         value="#{empleadosController.selected.documentoTipo}" 
+                                         title="#{bundle.CreateEmpleadosTitle_documentoTipo}" 
+                                         required="true" 
+                                         requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_documentoTipo}">
+                            <f:selectItem itemLabel="Seleccionar Tipo Documento" 
+                                          itemValue="" />
+                            <f:selectItem itemLabel="RC" itemValue="RC" />
+                            <f:selectItem itemLabel="TI" itemValue="TI" />
+                            <f:selectItem itemLabel="CC" itemValue="CC" />
+                            <f:selectItem itemLabel="CE" itemValue="CE" />
+                        </p:selectOneMenu>
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_documentoNumero}" 
+                                       for="documentoNumero" />
+                        <p:inputNumber id="documentoNumero"
+                                       value="#{empleadosController.selected.documentoNumero}"
+                                       title="#{bundle.CreateEmpleadosTitle_documentoNumero}"
+                                       required="true"
+                                       requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_numerodedocumeto}"
+                                       decimalPlaces="0" />
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_nombres}" 
+                                       for="nombres" />
+                        <p:inputText id="nombres" 
+                                     value="#{empleadosController.selected.nombres}" 
+                                     title="#{bundle.CreateEmpleadosTitle_nombres}"
+                                     required="true"
+                                     requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_nombres}" />
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_apellidos}" 
+                                       for="apellidos" />
+                        <p:inputText id="apellidos" 
+                                     value="#{empleadosController.selected.apellidos}" 
+                                     title="#{bundle.CreateEmpleadosTitle_apellidos}"
+                                     required="true"
+                                     requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_apellidos}" />
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_departamentosId}" 
+                                       for="departamentosId" />
+                        <p:selectOneMenu id="departamentosId" 
+                                         value="#{empleadosController.selected.departamentosId}"
+                                         required="true"
+                                         requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_departamento}">
+                            <f:selectItem itemLabel="Seleccionar Departamento" 
+                                          itemValue="" />
+                            <f:selectItems value="#{departamentosController.itemsAvailableSelectOne}"
+                                           var="departamento"
+                                           itemLabel="#{departamento.departamentoNombre}" 
+                                           itemValue="#{departamento}"/>
+                        </p:selectOneMenu>
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_ciudad}" 
+                                       for="ciudad" />
+                        <p:selectOneMenu id="ciudad" 
+                                         value="#{empleadosController.selected.ciudad}" 
+                                         title="#{bundle.CreateEmpleadosTitle_ciudad}"
+                                         required="true" 
+                                         requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_ciudad}">
+                            <f:selectItem itemLabel="Seleccionar Ciudad" 
+                                          itemValue="" />
+                            <f:selectItem itemLabel="Armenia" itemValue="Armenia" />
+                            <f:selectItem itemLabel="Barranquilla" itemValue="Barranquilla" />
+                            <f:selectItem itemLabel="Bogotá" itemValue="Bogotá" />
+                            <f:selectItem itemLabel="Bucaramanga" itemValue="Bucaramanga" />
+                            <f:selectItem itemLabel="Buenaventura" itemValue="Buenaventura" />
+                            <f:selectItem itemLabel="Cali" itemValue="Cali" />
+                            <f:selectItem itemLabel="Cartagena" itemValue="Cartagena" />
+                            <f:selectItem itemLabel="Cúcuta" itemValue="Cúcuta" />
+                            <f:selectItem itemLabel="Florencia" itemValue="Florencia" />
+                            <f:selectItem itemLabel="Ibagué" itemValue="Ibagué" />
+                            <f:selectItem itemLabel="Manizales" itemValue="Manizales" />
+                            <f:selectItem itemLabel="Medellín" itemValue="Medellín" />
+                            <f:selectItem itemLabel="Montería" itemValue="Montería" />
+                            <f:selectItem itemLabel="Neiva" itemValue="Neiva" />
+                            <f:selectItem itemLabel="Palmira" itemValue="Palmira" />
+                            <f:selectItem itemLabel="Pasto" itemValue="Pasto" />
+                            <f:selectItem itemLabel="Popayán" itemValue="Popayán" />
+                            <f:selectItem itemLabel="Santa Marta" itemValue="Santa Marta" />
+                            <f:selectItem itemLabel="Sincelejo" itemValue="Sincelejo" />
+                            <f:selectItem itemLabel="Soacha" itemValue="Soacha" />
+                            <f:selectItem itemLabel="Soledad" itemValue="Soledad" />
+                            <f:selectItem itemLabel="Valledupar" itemValue="Valledupar" />
+                            <f:selectItem itemLabel="Villavicencio" itemValue="Villavicencio" />
+                        </p:selectOneMenu>
+
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_direccion}" 
+                                       for="direccion" />
+                        <p:inputText id="direccion" 
+                                     value="#{empleadosController.selected.direccion}" 
+                                     title="#{bundle.CreateEmpleadosTitle_direccion}"
+                                     required="true"
+                                     requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_direccion}" />
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_correoElectronico}" 
+                                       for="correoElectronico" />
+                        <p:inputText id="correoElectronico" 
+                                     value="#{empleadosController.selected.correoElectronico}" 
+                                     title="#{bundle.CreateEmpleadosTitle_correoElectronico}"
+                                     required="true"
+                                     requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_correo}">
+                            <f:validateRegex pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                        </p:inputText>
+
+                        <p:outputLabel value="#{bundle.CreateEmpleadosLabel_telefono}" 
+                                       for="telefono" />
+                        <p:inputText id="telefono" 
+                                     value="#{empleadosController.selected.telefono}" 
+                                     title="#{bundle.CreateEmpleadosTitle_telefono}"
+                                     required="true"
+                                     requiredMessage="#{bundle.CreateEmpleadosRequiredMessage_numerotelefonico}"
+                                     type="number" />                        
+
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{empleadosController.create}" 
+                                     value="#{bundle.Save}"
+                                     update="display,:EmpleadosListForm:datalist,:growl" 
+                                     oncomplete="handleSubmit(args,'EmpleadosCreateDialog');"/>
+                    
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
